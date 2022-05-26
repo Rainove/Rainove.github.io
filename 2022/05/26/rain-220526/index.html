@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="从今天开始建立第一份自己的博客， 那么让我们开始努力吧！">
+  <meta name="description" content="在求非重复最大连续子串问题可以用到滑动窗口来解决。我们使用两个指针表示字符串中的某个子串（或窗口）的左右边界，其中左指针代表着子串的起始位置，而右指针代表子串的末尾位置；在每一步的操作中，我们会将左指针向右移动一格，表示我们开始枚举下一个字符作为起始位置，然后我们可以不断地向右移动右指针，但需要保证这两个指针对应的子串中没有重复的字符。在移动结束后，这个子串就对应着以左指针开始的，不包含重复字符的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初次记录">
-<meta property="og:url" content="http://example.com/2022/05/19/rain-first-blog/index.html">
+<meta property="og:title" content="滑动窗口">
+<meta property="og:url" content="http://example.com/2022/05/26/rain-220526/index.html">
 <meta property="og:site_name" content="Rainove的个人博客">
-<meta property="og:description" content="从今天开始建立第一份自己的博客， 那么让我们开始努力吧！">
+<meta property="og:description" content="在求非重复最大连续子串问题可以用到滑动窗口来解决。我们使用两个指针表示字符串中的某个子串（或窗口）的左右边界，其中左指针代表着子串的起始位置，而右指针代表子串的末尾位置；在每一步的操作中，我们会将左指针向右移动一格，表示我们开始枚举下一个字符作为起始位置，然后我们可以不断地向右移动右指针，但需要保证这两个指针对应的子串中没有重复的字符。在移动结束后，这个子串就对应着以左指针开始的，不包含重复字符的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-19T14:43:13.000Z">
-<meta property="article:modified_time" content="2022-05-20T06:23:11.117Z">
+<meta property="article:published_time" content="2022-05-26T13:12:38.000Z">
+<meta property="article:modified_time" content="2022-05-26T13:47:42.414Z">
 <meta property="article:author" content="Rainove">
+<meta property="article:tag" content="双指针">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/05/19/rain-first-blog/">
+<link rel="canonical" href="http://example.com/2022/05/26/rain-220526/">
 
 
 <script id="page-configurations">
@@ -45,7 +46,7 @@
   };
 </script>
 
-  <title>初次记录 | Rainove的个人博客</title>
+  <title>滑动窗口 | Rainove的个人博客</title>
   
 
 
@@ -150,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/19/rain-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/26/rain-220526/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          初次记录
+          滑动窗口
         </h1>
 
         <div class="post-meta">
@@ -172,16 +173,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-05-19 22:43:13" itemprop="dateCreated datePublished" datetime="2022-05-19T22:43:13+08:00">2022-05-19</time>
+              <time title="创建时间：2022-05-26 21:12:38 / 修改时间：21:47:42" itemprop="dateCreated datePublished" datetime="2022-05-26T21:12:38+08:00">2022-05-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-20 14:23:11" itemprop="dateModified" datetime="2022-05-20T14:23:11+08:00">2022-05-20</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
 
           
 
@@ -194,9 +198,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>从今天开始建立第一份自己的博客，</p>
-<p>那么让我们开始努力吧！</p>
-
+        <p>在求非重复最大连续子串问题可以用到滑动窗口来解决。我们使用两个指针表示字符串中的某个子串（或窗口）的左右边界，其中左指针代表着<strong>子串的起始位置</strong>，而右指针代表<strong>子串的末尾位置</strong>；<br>在每一步的操作中，我们会将左指针向右移动一格，表示我们开始枚举下一个字符作为起始位置，然后我们可以不断地向右移动右指针，但需要保证这两个指针对应的子串中没有重复的字符。在移动结束后，这个子串就对应着以左指针开始的，不包含重复字符的最长子串。我们记录下这个子串的长度； 在枚举结束后，我们找到的最长的子串的长度即为最大连续子串。</p>
+<span id="more"></span>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>给定一个字符串 s ，请找出其中不含有重复字符的<strong>最长子串</strong>的长度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>&lt;char&gt; ans; //集合</span><br><span class="line">int fast=0,ma=0;</span><br><span class="line">int n=s.size();</span><br><span class="line"><span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">    <span class="keyword">while</span>(fast&lt;n&amp;&amp;ans.count(s[fast])==0)&#123; //count()返回集合某个值的元素的数目</span><br><span class="line">        ans.insert(s[fast]); //insert()在集合中插入元素</span><br><span class="line">        fast++;</span><br><span class="line">    &#125;</span><br><span class="line">    ma=max(fast-i,ma);</span><br><span class="line">    ans.erase(s[i]); //erase()删除集合中的指定元素</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> ma;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -204,6 +209,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"># 双指针</a>
+          </div>
 
         
 
@@ -211,13 +219,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/18/hello-world/" rel="prev" title="博客使用技巧">
-      <i class="fa fa-chevron-left"></i> 博客使用技巧
+    <a href="/2022/05/25/rain-220525/" rel="prev" title="链表">
+      <i class="fa fa-chevron-left"></i> 链表
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/20/rain-220520/" rel="next" title="焦虑是我们这个时代最没用的情绪">
-      焦虑是我们这个时代最没用的情绪 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -276,6 +281,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">例题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
