@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="在一个有序的数组中搜索一个特定的数值时，二分查找能有效降低时间复杂度。主要思路为设定一个左边界left和一个右边界right,通过不断收缩左右边界来确定所需要查找数值。">
+  <meta name="description" content="宏在程序编译之前，先会替换宏。 1#define cube(x) cube(x*x*x) 静态本地变量静态本地变量本质为全局变量，它的生存期为全局，但只在函数内部作用。 1static int x&#x3D;0; 头文件与宏一样为编译预处理。实质上并不会引入库，c语言编译器会默认引入所有标准库。 12#include &lt;bits&#x2F;stdc++.h&gt; 在标准库里寻找#include &quot;s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典算法-二分查找">
-<meta property="og:url" content="http://example.com/2022/05/21/rain-220521/index.html">
+<meta property="og:title" content="程序结构（C）">
+<meta property="og:url" content="http://example.com/2022/05/28/rain-220528/index.html">
 <meta property="og:site_name" content="Rainove的个人博客">
-<meta property="og:description" content="在一个有序的数组中搜索一个特定的数值时，二分查找能有效降低时间复杂度。主要思路为设定一个左边界left和一个右边界right,通过不断收缩左右边界来确定所需要查找数值。">
+<meta property="og:description" content="宏在程序编译之前，先会替换宏。 1#define cube(x) cube(x*x*x) 静态本地变量静态本地变量本质为全局变量，它的生存期为全局，但只在函数内部作用。 1static int x&#x3D;0; 头文件与宏一样为编译预处理。实质上并不会引入库，c语言编译器会默认引入所有标准库。 12#include &lt;bits&#x2F;stdc++.h&gt; 在标准库里寻找#include &quot;s">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-21T15:29:16.000Z">
-<meta property="article:modified_time" content="2022-05-26T13:47:42.437Z">
+<meta property="article:published_time" content="2022-05-28T01:46:48.000Z">
+<meta property="article:modified_time" content="2022-05-28T02:58:05.007Z">
 <meta property="article:author" content="Rainove">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/05/21/rain-220521/">
+<link rel="canonical" href="http://example.com/2022/05/28/rain-220528/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>经典算法-二分查找 | Rainove的个人博客</title>
+  <title>程序结构（C） | Rainove的个人博客</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/21/rain-220521/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/28/rain-220528/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          经典算法-二分查找
+          程序结构（C）
         </h1>
 
         <div class="post-meta">
@@ -172,23 +172,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-05-21 23:29:16" itemprop="dateCreated datePublished" datetime="2022-05-21T23:29:16+08:00">2022-05-21</time>
+              <time title="创建时间：2022-05-28 09:46:48 / 修改时间：10:58:05" itemprop="dateCreated datePublished" datetime="2022-05-28T09:46:48+08:00">2022-05-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-26 21:47:42" itemprop="dateModified" datetime="2022-05-26T21:47:42+08:00">2022-05-26</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                  <a href="/categories/%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">复习</span></a>
                 </span>
             </span>
 
@@ -203,17 +197,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在一个有序的数组中搜索一个特定的数值时，二分查找能有效降低时间复杂度。主要思路为设定一个左边界left和一个右边界right,通过不断收缩左右边界来确定所需要查找数值。</p>
-<span id="more"></span>
-<h3 id="具体思路"><a href="#具体思路" class="headerlink" title="具体思路"></a>具体思路</h3><p>在数组[left,right]中，先设定一个变量mid为中值下标。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int mid=left+(right-left)/2</span><br></pre></td></tr></table></figure>
-<p>其中为了避免变量除法中向下取整所引起的误差，所以这里要采取左边界+左右边界的长度/2的方法来获取中值下标mid。<br>接下来我们让目标数值与数组中值进行比较，若目标数数值&gt;数值中值，即不用再mid左侧的数组中进行查找，那么我们将左边界left的值右移到mid的右侧</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">left=mid+1</span><br></pre></td></tr></table></figure>
-<p>重复此思路直到找到目标数值或左边界left&gt;右边界right</p>
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>给定一个排序数组nums和一个目标值target，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int right=length-1;</span><br><span class="line">int left=0;</span><br><span class="line"><span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">    int mid=left+(right-left)/2;</span><br><span class="line">    <span class="keyword">if</span>(nums[mid]&lt;target)&#123;</span><br><span class="line">        left=mid+1;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        right=mid-1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> left;</span><br></pre></td></tr></table></figure>
-<p><strong>需要注意的是为了防止数组越界，我们要从左边界开始进行比较</strong></p>
-
+        <h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><p>在程序编译之前，先会替换宏。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define cube(x) cube(x*x*x)</span></span><br></pre></td></tr></table></figure>
+<h3 id="静态本地变量"><a href="#静态本地变量" class="headerlink" title="静态本地变量"></a>静态本地变量</h3><p>静态本地变量本质为全局变量，它的生存期为全局，但只在函数内部作用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static int x=0;</span><br></pre></td></tr></table></figure>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><p>与宏一样为编译预处理。实质上并不会引入库，c语言编译器会默认引入所有标准库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;bits/stdc++.h&gt; 在标准库里寻找</span></span><br><span class="line"><span class="comment">#include &quot;s.h&quot; 在当前目录寻找</span></span><br></pre></td></tr></table></figure>
+<h3 id="私有函数-static"><a href="#私有函数-static" class="headerlink" title="私有函数-static"></a>私有函数-static</h3><p>只会在它所在的编译单元中使用。</p>
+<h3 id="项目全局变量-extern"><a href="#项目全局变量-extern" class="headerlink" title="项目全局变量-extern"></a>项目全局变量-extern</h3><p>extern为变量的声明，不可以赋予初值。</p>
+<h3 id="宏定义-判断"><a href="#宏定义-判断" class="headerlink" title="宏定义-判断"></a>宏定义-判断</h3><p>为保证避免引入过多头文件而引起的重复而加入判断机制。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef _MAX_H_ 如果不存在_MAX_H_</span></span><br><span class="line"><span class="comment">#define _MAX_H_ 则声明_MAX_H_并执行下列定义</span></span><br><span class="line">double max(double a,double b);</span><br><span class="line"><span class="comment">#endif</span></span><br></pre></td></tr></table></figure>
+<h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void f(int i)&#123;</span><br><span class="line">  cout&lt;&lt;<span class="string">i;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">void (*fp)(int) = f;</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -228,12 +222,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/20/rain-220520/" rel="prev" title="焦虑是我们这个时代最没用的情绪">
-      <i class="fa fa-chevron-left"></i> 焦虑是我们这个时代最没用的情绪
+    <a href="/2022/05/27/rain-220527/" rel="prev" title="深度优先搜索（DFS）与广度优先搜索（BFS）">
+      <i class="fa fa-chevron-left"></i> 深度优先搜索（DFS）与广度优先搜索（BFS）
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/22/rain-220522/" rel="next" title="排序数组">
-      排序数组 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/28/rain-tree/" rel="next" title="二叉树">
+      二叉树 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -293,7 +287,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">具体思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">例题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8F"><span class="nav-number">1.</span> <span class="nav-text">宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%9C%AC%E5%9C%B0%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">静态本地变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">头文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E5%87%BD%E6%95%B0-static"><span class="nav-number">4.</span> <span class="nav-text">私有函数-static</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F-extern"><span class="nav-number">5.</span> <span class="nav-text">项目全局变量-extern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89-%E5%88%A4%E6%96%AD"><span class="nav-number">6.</span> <span class="nav-text">宏定义-判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="nav-number">7.</span> <span class="nav-text">函数指针</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

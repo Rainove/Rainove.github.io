@@ -145,6 +145,158 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/28/rain-tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Rainove">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainove的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/28/rain-tree/" class="post-title-link" itemprop="url">二叉树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-05-28 19:58:48 / 修改时间：20:22:47" itemprop="dateCreated datePublished" datetime="2022-05-28T19:58:48+08:00">2022-05-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><p>树的本质是一种层次结构，是一种具有高效管理的层次结构。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/28/rain-tree/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/28/rain-220528/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Rainove">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainove的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/28/rain-220528/" class="post-title-link" itemprop="url">程序结构（C）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-05-28 09:46:48 / 修改时间：10:58:05" itemprop="dateCreated datePublished" datetime="2022-05-28T09:46:48+08:00">2022-05-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><p>在程序编译之前，先会替换宏。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define cube(x) cube(x*x*x)</span></span><br></pre></td></tr></table></figure>
+<h3 id="静态本地变量"><a href="#静态本地变量" class="headerlink" title="静态本地变量"></a>静态本地变量</h3><p>静态本地变量本质为全局变量，它的生存期为全局，但只在函数内部作用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static int x=0;</span><br></pre></td></tr></table></figure>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><p>与宏一样为编译预处理。实质上并不会引入库，c语言编译器会默认引入所有标准库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;bits/stdc++.h&gt; 在标准库里寻找</span></span><br><span class="line"><span class="comment">#include &quot;s.h&quot; 在当前目录寻找</span></span><br></pre></td></tr></table></figure>
+<h3 id="私有函数-static"><a href="#私有函数-static" class="headerlink" title="私有函数-static"></a>私有函数-static</h3><p>只会在它所在的编译单元中使用。</p>
+<h3 id="项目全局变量-extern"><a href="#项目全局变量-extern" class="headerlink" title="项目全局变量-extern"></a>项目全局变量-extern</h3><p>extern为变量的声明，不可以赋予初值。</p>
+<h3 id="宏定义-判断"><a href="#宏定义-判断" class="headerlink" title="宏定义-判断"></a>宏定义-判断</h3><p>为保证避免引入过多头文件而引起的重复而加入判断机制。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef _MAX_H_ 如果不存在_MAX_H_</span></span><br><span class="line"><span class="comment">#define _MAX_H_ 则声明_MAX_H_并执行下列定义</span></span><br><span class="line">double max(double a,double b);</span><br><span class="line"><span class="comment">#endif</span></span><br></pre></td></tr></table></figure>
+<h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void f(int i)&#123;</span><br><span class="line">  cout&lt;&lt;<span class="string">i;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">void (*fp)(int) = f;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/27/rain-220527/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -168,10 +320,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-05-27 22:14:34 / 修改时间：23:31:12" itemprop="dateCreated datePublished" datetime="2022-05-27T22:14:34+08:00">2022-05-27</time>
+              <time title="创建时间：2022-05-27 22:14:34" itemprop="dateCreated datePublished" datetime="2022-05-27T22:14:34+08:00">2022-05-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-28 21:25:51" itemprop="dateModified" datetime="2022-05-28T21:25:51+08:00">2022-05-28</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -194,9 +352,14 @@
 
       
           <h2 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h2><p>从起点不断向下搜索，直到遇到不符合搜索条件时，往上回溯一格。</p>
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>有一幅以m*n的二维整数数组表示的图画image,其中image[i][j]表示该图画的像素值大小。<br>以初始坐标image[sr][sc]开始改变像素值大小为newcolor。<br>上下左右的像素点与原初始坐标相同数值的像素点改变数值为newcolor，重复此步骤将所有可以改变的像素点改变。<br>最后返回图画image。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">const int dx[4]=&#123;1, 0, 0, -1&#125;; //与dy一起表示上下左右方向</span><br><span class="line">const int dy[4]=&#123;0, 1, -1, 0&#125;;</span><br><span class="line">void dfs(vector&lt;vector&lt;int&gt;&gt;&amp; image,int x, int y, int Color, int newColor)&#123;</span><br><span class="line">    <span class="keyword">if</span>(image[x][y]==Color)&#123; //与初始坐标相同则符合条件</span><br><span class="line">        image[x][y]=newColor;</span><br><span class="line">        <span class="keyword">for</span>(int i=0;i&lt;4;i++)&#123;</span><br><span class="line">            int mx = x+dx[i],my = y+dy[i]; //沿着上下左右继续搜索</span><br><span class="line">            <span class="keyword">if</span>(mx&gt;=0&amp;&amp;mx&lt;image.size()&amp;&amp;my&gt;=0&amp;&amp;my&lt;image[0].size())&#123; //二维数值的长度求法</span><br><span class="line">                dfs(image, mx, my, Color, newColor); //调用递归函数</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">vector&lt;vector&lt;int&gt;&gt; floodFill(vector&lt;vector&lt;int&gt;&gt;&amp; image, int sr, int sc, int newColor) &#123;</span><br><span class="line">    int Color=image[sr][sc];</span><br><span class="line">    <span class="keyword">if</span>(Color!=newColor)&#123;</span><br><span class="line">        dfs(image, sr, sc, Color, newColor);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/05/27/rain-220527/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -729,80 +892,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Rainove">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rainove的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/18/hello-world/" class="post-title-link" itemprop="url">博客使用技巧</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-05-18 10:43:13" itemprop="dateCreated datePublished" datetime="2022-05-18T10:43:13+08:00">2022-05-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-21 23:26:53" itemprop="dateModified" datetime="2022-05-21T23:26:53+08:00">2022-05-21</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>欢迎来到我的 <a target="_blank" rel="noopener" href="https://rainove.github.io/">博客</a>! 我打算在这里记录一些基础的使用方法. 更多的使用方法需要去Hexo官方 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a> 阅读. </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/05/18/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -867,7 +961,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
